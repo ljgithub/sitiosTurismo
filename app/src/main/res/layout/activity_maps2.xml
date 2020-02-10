@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0DCE6"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:id="@+id/liner55"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHibrido"
+            android:text="HIBRIDO"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSatelital"
+            android:text="SATELITAL"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnTerreno"
+            android:text="TERRENO"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNormal"
+            android:text="NORMAL"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/liner56"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/liner55"
+        android:orientation="horizontal"
+        >
+        <fragment 
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MapsActivity2"
+            />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
