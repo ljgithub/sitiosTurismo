@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,53 +8,43 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="324dp">
-
-        <Button
-            android:id="@+id/btnSitios"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
-            android:background="#35AD83"
-            android:text="SITIOS TURISTICOS" />
-
-        <Button
-            android:id="@+id/btnTipos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="TIPO DE MAPA" />
-
-        <Button
-            android:id="@+id/btnUbicacion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="@android:color/holo_orange_dark"
-            android:text="DONDE ESTOY" />
-
-        <Button
-            android:id="@+id/btnRegistro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="#323FB9"
-            android:onClick="Enviar"
-            android:text="Registro" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="400dp"
-            android:layout_height="102dp"
-            android:contentDescription="TODO" app:srcCompat="@drawable/princia" />
+    <ImageButton
+        android:id="@+id/btnSitios"
+        android:layout_width="156dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="109dp"
+        android:cropToPadding="true"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/misstios" />
 
 
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/btnUbicacion"
+        android:layout_width="156dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="16dp"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mylocation2" />
+
+    <ImageButton
+        android:id="@+id/btnTipos"
+        android:layout_width="156dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="187dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="true"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tipomapa" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

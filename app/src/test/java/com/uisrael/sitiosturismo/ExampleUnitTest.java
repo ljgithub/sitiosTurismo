@@ -1,4 +1,4 @@
-package com.sagbaicela.sitiosturismo;
+package com.uisrael.sitiosturismo;
 
 import org.junit.Test;
 
