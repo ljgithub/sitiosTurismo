@@ -3,8 +3,10 @@ package com.uisrael.sitiosturismo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import com.uisrael.sitiosturismo.ObjectsToTransmit.Usuarios;
+import android.os.StrictMode;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import org.kobjects.base64.Base64;
 import org.ksoap2.SoapEnvelope;
@@ -22,15 +24,43 @@ import java.io.ObjectOutputStream;
 public class LogInUsersActivity extends AppCompatActivity {
     static String ip;//="192.168.1.48"; //"192.168.14.205"; //"192.168.14.106";
     static String port;
-    String namespace="http://ws.sendproperties.com";
+    String namespace="http://sitioWsPublic.uisrael.com//WebServiceSitio/";
     //String url="http://"+ip+":"+port+"/wsmegaalmacen/services/Bdservices?wsdl";
-    String url = "http://localhost:8081/WsInterSItios/WebServiceSitio?wsdl";
+    String url = "http://10.0.2.2:8081/WsInterSItios/WebServiceSitio?wsdl";
+
+    EditText userView, passView;
+    Button loginView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in_users);
+
+        userView = (EditText)findViewById(R.id.edtUser);
+        passView = (EditText)findViewById(R.id.edtPass);
+
+        loginView = (Button) findViewById(R.id.btnLogin);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        final Usuarios usuarios = new Usuarios();
+
+
+        loginView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    usuarios.setUser(userView.getText().toString());
+                    usuarios.setPass(passView.getText().toString());
+                    logInUsers(usuarios);
+                }catch (Exception ex){
+                    ex.printStackTrace();
+                }
+
+            }
+        });
     }
 
 

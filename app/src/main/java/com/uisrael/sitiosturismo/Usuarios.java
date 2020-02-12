@@ -1,11 +1,16 @@
-package com.uisrael.sitiosturismo.ObjectsToTransmit;
+package com.uisrael.sitiosturismo;
 
 import java.io.Serializable;
 
 public class Usuarios implements Serializable {
+	private static final long serialVersionUID = 6529685098267757690L;
 	private String user,pass;
 	private int id;
-	
+
+	public Usuarios(){
+
+	}
+
 	public Usuarios(String user, String pass )//int id
 	{
 		this.user=user;

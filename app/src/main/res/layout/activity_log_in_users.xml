@@ -12,7 +12,7 @@ android:paddingBottom="@dimen/activity_vertical_margin"
 tools:context="com.uisrael.sitiosturismo.LogInUsersActivity">
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/edtUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -27,7 +27,7 @@ tools:context="com.uisrael.sitiosturismo.LogInUsersActivity">
         app:layout_constraintTop_toTopOf="parent" />
 
 <EditText
-    android:id="@+id/password"
+    android:id="@+id/edtPass"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="24dp"
@@ -41,10 +41,10 @@ tools:context="com.uisrael.sitiosturismo.LogInUsersActivity">
     android:selectAllOnFocus="true"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/username" />
+    app:layout_constraintTop_toBottomOf="@+id/edtUser" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -52,12 +52,12 @@ tools:context="com.uisrael.sitiosturismo.LogInUsersActivity">
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="64dp"
-        android:enabled="false"
+        android:enabled="true"
         android:text="@string/action_log_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/edtPass"
         app:layout_constraintVertical_bias="0.2" />
 
 <ProgressBar
@@ -71,8 +71,8 @@ tools:context="com.uisrael.sitiosturismo.LogInUsersActivity">
     android:layout_marginBottom="64dp"
     android:visibility="gone"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="@+id/password"
-    app:layout_constraintStart_toStartOf="@+id/password"
+    app:layout_constraintEnd_toEndOf="@+id/edtPass"
+    app:layout_constraintStart_toStartOf="@+id/edtPass"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
